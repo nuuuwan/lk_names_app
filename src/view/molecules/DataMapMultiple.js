@@ -4,6 +4,11 @@ export default function DataMapMultiple({
   selectedNameList,
 }) {
   let renderedTrs = [];
+
+  let nameToHue = {};
+  let iName = 0;
+  const nNames = selectedNameList.length;
+
   for (let [regionId, nameToCount] of Object.entries(regionToNameToCount)) {
     const filteredNameAndCount = Object.entries(nameToCount)
       .filter(([name, count]) => selectedNameList.includes(name) && count > 0)
@@ -14,14 +19,29 @@ export default function DataMapMultiple({
       const [name, count] = filteredNameAndCount[0];
 
       const PRECISION = 10_000;
-      const p = Math.round(PRECISION* count / totalCount)/PRECISION;
-      const pStr = p >= 0.005 ? p.toLocaleString("en", {style: "percent", maximumSignificantDigits: 2}) : '-';
+      const p = Math.round((PRECISION * count) / totalCount) / PRECISION;
+      const pStr =
+        p >= 0.005
+          ? p.toLocaleString("en", {
+              style: "percent",
+              maximumSignificantDigits: 2,
+            })
+          : "-";
 
       const key = `tr-${regionId}`;
+
+      if (nameToHue[name] === undefined) {
+        nameToHue[name] = parseInt((360 * iName) / nNames);
+        iName++;
+      }
+      const hue = nameToHue[name];
+      const backgroundColor = `hsla(${hue},100%,50%,0.5)`;
+      const styleCustom = { backgroundColor };
+
       const tr = (
         <tr key={key}>
           <td>{regionId}</td>
-          <td>{name}</td>
+          <td style={styleCustom}>{name}</td>
           <td>{pStr}</td>
         </tr>
       );

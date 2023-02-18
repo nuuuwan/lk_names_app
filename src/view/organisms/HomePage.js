@@ -13,14 +13,13 @@ export default class HomePage extends Component {
       selectedNameList: DEFAULT_SELECTED_NAMES,
       regionToCount: null,
       regionToNameToCount: null,
-     
     };
   }
 
   async componentDidMount() {
     const regionToCount = await Name.regionToCount();
-    const regionToNameToCount = await Name.regionToNameToCount();    
-    this.setState({regionToCount,  regionToNameToCount });
+    const regionToNameToCount = await Name.regionToNameToCount();
+    this.setState({ regionToCount, regionToNameToCount });
   }
 
   onChangeSelectedNameList(selectedNameList) {

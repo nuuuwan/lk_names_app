@@ -10,7 +10,6 @@ const URL_REGION_TO_COUNT = [
   "region_to_count.json",
 ].join("/");
 
-
 export default class Name {
   static async listAll() {
     const regionIdx = await Region.idxAll();
@@ -39,16 +38,15 @@ export default class Name {
     const regionToCountOriginal = await WWW.json(URL_REGION_TO_COUNT);
     const regionToCount = Object.entries(regionToCountOriginal).reduce(
       function (regionToCount, [regionId, count]) {
-        if (regionId.substring(0,3) === 'LK-') {
+        if (regionId.substring(0, 3) === "LK-") {
           regionToCount[regionId] = count;
         }
         return regionToCount;
       },
-      {},
-    )
+      {}
+    );
     const total = Object.values(regionToCount).reduce((a, b) => a + b, 0);
-    regionToCount['LK'] = total;
+    regionToCount["LK"] = total;
     return regionToCount;
-    
   }
 }

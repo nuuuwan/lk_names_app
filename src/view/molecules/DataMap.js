@@ -2,9 +2,13 @@ import React from "react";
 import DataMapMultiple from "./DataMapMultiple";
 import DataMapSingle from "./DataMapSingle";
 
-import "./DataMap.css"
+import "./DataMap.css";
 
-export default function DataMap({ regionToCount, regionToNameToCount, selectedNameList }) {
+export default function DataMap({
+  regionToCount,
+  regionToNameToCount,
+  selectedNameList,
+}) {
   if (selectedNameList.length === 1) {
     return (
       <DataMapSingle
