@@ -8,16 +8,28 @@ export default class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedNames: DEFAULT_SELECTED_NAMES,
+      selectedNameList: DEFAULT_SELECTED_NAMES,
     };
   }
 
   async componentDidMount() {}
 
+  onChangeSelectedNameList(selectedNameList) {
+    console.debug(selectedNameList);
+    this.setState({
+      selectedNameList,
+    });
+  }
+
   render() {
+    const { selectedNameList } = this.state;
     return (
       <Box>
-        <NameSelector />
+        <NameSelector
+          selectedNameList={selectedNameList}
+          onChangeSelectedNameList={this.onChangeSelectedNameList.bind(this)}
+        />
+        {selectedNameList}
       </Box>
     );
   }
