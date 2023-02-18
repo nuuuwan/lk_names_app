@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/lk_names_app/static/css/main.e6c13ad2.css",
+    "main.js": "/lk_names_app/static/js/main.a405065a.js",
+    "static/js/787.00ab2966.chunk.js": "/lk_names_app/static/js/787.00ab2966.chunk.js",
+    "index.html": "/lk_names_app/index.html",
+    "main.e6c13ad2.css.map": "/lk_names_app/static/css/main.e6c13ad2.css.map",
+    "main.a405065a.js.map": "/lk_names_app/static/js/main.a405065a.js.map",
+    "787.00ab2966.chunk.js.map": "/lk_names_app/static/js/787.00ab2966.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.a405065a.js"
+  ]
+}
