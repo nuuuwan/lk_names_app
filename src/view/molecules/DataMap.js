@@ -1,11 +1,15 @@
 import React from "react";
 import DataMapMultiple from "./DataMapMultiple";
 import DataMapSingle from "./DataMapSingle";
-export default function DataMap({ regionToNameToCount, selectedNameList }) {
+
+import "./DataMap.css"
+
+export default function DataMap({ regionToCount, regionToNameToCount, selectedNameList }) {
   if (selectedNameList.length === 1) {
     return (
       <DataMapSingle
         selectedName={selectedNameList[0]}
+        regionToCount={regionToCount}
         regionToNameToCount={regionToNameToCount}
       />
     );
@@ -14,6 +18,7 @@ export default function DataMap({ regionToNameToCount, selectedNameList }) {
   return (
     <DataMapMultiple
       selectedNameList={selectedNameList}
+      regionToCount={regionToCount}
       regionToNameToCount={regionToNameToCount}
     />
   );
