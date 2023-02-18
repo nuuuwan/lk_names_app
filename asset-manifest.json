@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lk_names_app/static/css/main.df6bbf4c.css",
-    "main.js": "/lk_names_app/static/js/main.b3dc9af4.js",
+    "main.css": "/lk_names_app/static/css/main.f517da48.css",
+    "main.js": "/lk_names_app/static/js/main.f8b347a8.js",
     "static/js/787.00ab2966.chunk.js": "/lk_names_app/static/js/787.00ab2966.chunk.js",
     "index.html": "/lk_names_app/index.html",
-    "main.df6bbf4c.css.map": "/lk_names_app/static/css/main.df6bbf4c.css.map",
-    "main.b3dc9af4.js.map": "/lk_names_app/static/js/main.b3dc9af4.js.map",
+    "main.f517da48.css.map": "/lk_names_app/static/css/main.f517da48.css.map",
+    "main.f8b347a8.js.map": "/lk_names_app/static/js/main.f8b347a8.js.map",
     "787.00ab2966.chunk.js.map": "/lk_names_app/static/js/787.00ab2966.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.df6bbf4c.css",
-    "static/js/main.b3dc9af4.js"
+    "static/css/main.f517da48.css",
+    "static/js/main.f8b347a8.js"
   ]
 }
