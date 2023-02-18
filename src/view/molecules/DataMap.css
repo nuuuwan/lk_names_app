@@ -6,7 +6,15 @@ table {
 tr {
 }
 
-td {
+td, th {
   border: 1px solid #ddd;
   padding: 6px;
+}
+
+.td-right {
+  text-align: right;
+}
+
+.highest {
+  background-color: rgba(255, 0, 0, 0.1);
 }
