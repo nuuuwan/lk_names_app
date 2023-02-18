@@ -1,4 +1,5 @@
 export default function DataMapSingle({
+  regionIdx,
   regionToCount,
   regionToNameToCount,
   selectedName,
@@ -18,10 +19,13 @@ export default function DataMapSingle({
           })
         : "-";
 
+    const region = regionIdx[regionId];
+    const regionName = region.name;
+
     const key = `tr-${regionId}`;
     const tr = (
       <tr key={key}>
-        <td>{regionId}</td>
+        <td>{regionName}</td>
         <td>{pStr}</td>
       </tr>
     );

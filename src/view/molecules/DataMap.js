@@ -5,6 +5,7 @@ import DataMapSingle from "./DataMapSingle";
 import "./DataMap.css";
 
 export default function DataMap({
+  regionIdx,
   regionToCount,
   regionToNameToCount,
   selectedNameList,
@@ -12,6 +13,7 @@ export default function DataMap({
   if (selectedNameList.length === 1) {
     return (
       <DataMapSingle
+        regionIdx={regionIdx}
         selectedName={selectedNameList[0]}
         regionToCount={regionToCount}
         regionToNameToCount={regionToNameToCount}
@@ -21,6 +23,7 @@ export default function DataMap({
 
   return (
     <DataMapMultiple
+      regionIdx={regionIdx}
       selectedNameList={selectedNameList}
       regionToCount={regionToCount}
       regionToNameToCount={regionToNameToCount}

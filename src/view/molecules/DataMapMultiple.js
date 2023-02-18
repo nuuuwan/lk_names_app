@@ -1,4 +1,5 @@
 export default function DataMapMultiple({
+  regionIdx,
   regionToCount,
   regionToNameToCount,
   selectedNameList,
@@ -38,9 +39,12 @@ export default function DataMapMultiple({
       const backgroundColor = `hsla(${hue},100%,50%,0.5)`;
       const styleCustom = { backgroundColor };
 
+      const region = regionIdx[regionId];
+      const regionName = region.name;
+
       const tr = (
         <tr key={key}>
-          <td>{regionId}</td>
+          <td>{regionName}</td>
           <td style={styleCustom}>{name}</td>
           <td>{pStr}</td>
         </tr>
